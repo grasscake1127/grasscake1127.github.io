@@ -25,13 +25,13 @@ body {
     justify-content: start;
     align-items: center;
     width: 80%;
-    margin-top: 100px;
     z-index: 1;
 }
 
 .image-container img {
     max-width: 600px;
     z-index: 1;
+    width: 100%;
 }
 
 .image-container p {

@@ -71,3 +71,9 @@ ul.top-right li:hover > ul { /* 滑鼠滑入展開次選單*/
 .active{
     background-color: #698E81;
 }
+
+.header-space{
+    height: 64px;
+    margin: 0;
+    padding: 0;
+}
