@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="styles/homepage.css">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/loading.css">
+
   </head>
   <body>
     <header>
@@ -20,18 +22,23 @@
             </ul>
             <ul class="top-right">
               <li><a class="active" href="">Home</a></li>
-              <li><a href="./gallery.html">Gallery</a></li>
-              <li><a href="./contest.html">Contest</a>
+              <li><a href="gallery/">Gallery</a></li>
+              <li><a href="contest/">Contest</a>
                 <ul>
                   <li><a>1st</a></li>
                   <li><a>2nd</a></li>
                 </ul>
               </li>
               <li><a href="https://myship.7-11.com.tw/general/detail/GM2311156758646">Store</a></li>
-              <li><a href="./about.html">About</a></li>
+              <li><a href="about/">About</a></li>
             </ul>
           </nav>
     </header>
+
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
 
     <div class="header-space">
 
@@ -55,5 +62,7 @@
     <div class="footer">
         @syuaweu
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
