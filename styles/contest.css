@@ -21,13 +21,18 @@ body {
     z-index: 1;
 }
 
-.image-container img {
+.origin{
     max-width: 600px;
     z-index: 1;
     width: 100%;
     box-shadow: 5px 8px 5px #d3d3be;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     margin-top: 20px;
+}
+.logo{
+    max-width: 500px;
+    z-index: 1;
+    width: 100%;
 }
 
 .image-container p {
@@ -62,25 +67,27 @@ div h1{
 
 
 .container a {
-    color: #97B694;
+    color: #8ea186;
     display: block;
     font-size: 1.2rem;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
     background-color: #ffffff;
-    box-shadow: 4px 3px 0 #97B694;
-    border: 3px solid #97B694 ;
+    box-shadow: 4px 3px 0 #8ea186;
+    border: 3px solid #8ea186;
     margin-right: 30px;
 }
 
 .container a:hover{
     background-color: #698E81;
     color: white;
+    text-decoration: underline;
 }
 
 .special{
     background-color: #4e6a60;
-    box-shadow: 4px 3px 0 #97B694;
+    box-shadow: 4px 3px 0 #8ea186;
     color: white;
+    text-decoration: underline 2px;
 }
