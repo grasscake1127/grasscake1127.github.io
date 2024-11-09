@@ -1,0 +1,86 @@
+body {
+    font-family: 'Microsoft JhengHei', sans-serif;
+    background-color: #fdfdef;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 70%;
+    z-index: 1;
+}
+
+.image-container img {
+    max-width: 600px;
+    z-index: 1;
+    width: 100%;
+    box-shadow: 5px 8px 5px #d3d3be;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.image-container p {
+    margin: 15px;
+    margin-left: 40px;
+    font-size: 1.2rem;
+
+}
+
+div h1{
+    color: #4e6a60;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.previous-container{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 70%;
+    z-index: 1;
+}
+
+.container ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+}
+
+
+.container a {
+    color: #97B694;
+    display: block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 4px 3px 0 #97B694;
+    border: 3px solid #97B694 ;
+    margin-right: 30px;
+}
+
+.container a:hover{
+    background-color: #698E81;
+    color: white;
+}
+
+.special{
+    background-color: #4e6a60;
+    box-shadow: 4px 3px 0 #97B694;
+    color: white;
+}
