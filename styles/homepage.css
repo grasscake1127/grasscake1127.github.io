@@ -14,6 +14,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    z-index: 2;
+    position: relative;
 }
 
 
@@ -75,6 +77,10 @@ div h2 b{
     margin-right: 30px;
     max-width: fit-content;
 }
+.container li{
+
+    margin-bottom: 40px;
+}
 
 .container a:hover{
     background-color: #698E81;
@@ -88,4 +94,8 @@ div h2 b{
     padding: 0;
     margin-left: 40px;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
+
+
+

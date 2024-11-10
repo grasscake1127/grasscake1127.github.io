@@ -12,7 +12,7 @@ body {
 }
 
 .image-container {
-    padding: 50px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -45,11 +45,12 @@ body {
 div h1{
     color: #4e6a60;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .previous-container{
     padding: 50px;
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -58,13 +59,21 @@ div h1{
     z-index: 1;
 }
 
-.container ul{
+.previous-container p{
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.previous-container ul{
     display: flex;
     flex-direction: row;
     list-style: none;
     padding: 0;
+    margin-top: 5px;
 }
-
+.previous-container h1{
+    margin-top: 40px;
+}
 
 .container a {
     color: #8ea186;
@@ -90,4 +99,30 @@ div h1{
     box-shadow: 4px 3px 0 #8ea186;
     color: white;
     text-decoration: underline 2px;
+}
+
+.info-2st-container{
+    padding: 50px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 70%;
+    z-index: 1;
+}
+
+.info-2st-container p{
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.info-2st-container h1{
+    margin-top: 40px;
+}
+.info-2st-container ul{
+    margin-bottom: 0;
+}
+i{
+    color: #4e6a60;
 }
