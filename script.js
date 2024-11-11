@@ -26,3 +26,12 @@ function createTriangle() {
 for (let i = 0; i < 20; i++) { // 這裡可以調整生成三角形的數量
     createTriangle();
 }
+
+const hamburgerToggle = document.querySelector(".hamburger-toggle");
+const navbarLinks = document.querySelector(".top-right");
+
+hamburgerToggle.addEventListener("click", () => {
+
+    navbarLinks.classList.toggle("clicked");
+    //class改成active後就執行.navbar-links.active的css，也就是display: flex
+})

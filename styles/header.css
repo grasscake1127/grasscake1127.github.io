@@ -2,7 +2,7 @@
 header nav {
     position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     background-color: #97B694;
     align-items: center;
@@ -98,8 +98,8 @@ ul.top-right li:hover > ul { /* 滑鼠滑入展開次選單*/
     width: 0;
     height: 0;
     border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 50px solid #94b695; /* 設定三角形顏色 */
+    border-right: 20px solid transparent;
+    border-bottom: 50px solid #75be7f; /* 設定三角形顏色 */
     opacity: 0.15;
     animation: float 10s linear infinite; /* 讓三角形浮動的動畫 */
 }
@@ -113,6 +113,78 @@ ul.top-right li:hover > ul { /* 滑鼠滑入展開次選單*/
         transform: translateY(-20px) rotate(180deg);
     }
     100% {
-        transform: translateY(0) rotate(360deg);
+        transform: translateY(5px) rotate(360deg);
+    }
+}
+
+.hamburger-toggle {
+    position: fixed;
+    width: 1.8rem;
+    height: 1.3rem;
+    top: 1rem;
+    right: 1rem;
+    padding: 5px;
+    display: none; /*預設不顯示*/
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;/*因為bar有長有短，所以靠左*/
+    cursor: pointer;
+    z-index: 11;
+}
+.hamburger-toggle span {
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+.hamburger-toggle .bar-3 {
+    width: 80%; /*裝逼造型*/
+}
+
+@media (max-width: 600px) {
+    .hamburger-toggle {
+        display: flex; /*顯示漢堡*/
+    }
+    .hamburger-toggle:hover {
+        cursor: pointer; /*因為漢堡是div，游標盤旋在它上面不會變成手掌造型的pointer，所以要補上*/
+    }
+    .top-right {
+        display: none; /*在漢堡被點前不顯示*/
+    }
+    nav {
+        flex-direction: column; /*把標題跟連結改成直行排列*/
+        align-items: flex-start;
+        padding-top: 4rem;
+    }
+    nav ul{
+        background-color: #acc7a2;
+    }
+    .top-right {
+        flex-direction: column;
+        width: 100%; /*使連結與螢幕等寬*/
+        display: flex; /*因為要滑入，所以顯示出來*/
+        position: absolute; /*要滑入就不待在原本的flexbox中了*/
+        top: 3.5rem; /*位在navbar下方*/
+        transition: transform 0.5s ease-in; /*滑出過場*/
+        transform: translateY(-200%); /*預設位於視窗之外*/
+    }
+    .top-right ul{
+        flex-direction: column; /*讓連結各自直行排列*/
+        width: 100%;
+    }
+    .top-right ul li{
+        width: 100%;
+    }
+    .top-right li {
+        text-align: center;
+    }
+    ul.top-right li:hover > ul { /* 滑鼠滑入展開次選單*/
+        display: none;
+    }
+    .top-right.clicked {
+        display: flex; /*看到JS你就懂這行了XD*/
+        flex-direction: column;
+        transition: transform 0.5s ease-in; /*滑入過場*/
+        transform: translateY(0%); /*點擊時從上方滑到navbar下方*/
     }
 }
