@@ -113,7 +113,7 @@ ul.top-right li:hover > ul { /* 滑鼠滑入展開次選單*/
         transform: translateY(-20px) rotate(180deg);
     }
     100% {
-        transform: translateY(5px) rotate(360deg);
+        transform: translateY(0) rotate(360deg);
     }
 }
 
