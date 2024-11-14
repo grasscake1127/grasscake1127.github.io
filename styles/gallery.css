@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    padding: 30px;
+    padding: 50px 30px;
 }
 /* 設定縮略圖大小和截圖方式 */
 .frame{
