@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
     <title>草粿 - Grass Cake</title>
 
-    <link rel="stylesheet" href="../styles/homepage.css">
+    <link rel="stylesheet" href="../styles/gallery.css">
     <link rel="stylesheet" href="../styles/header.css">
     
   </head>
@@ -47,10 +47,58 @@
     <div class="background">
         <!-- 三角形會動態生成 -->
     </div>
-    <div class="container">
-        <div class="image-container">
-            <p>Comming Soon ...</p>
+    <div class="gallery">
+        <div class="frame">
+            <p>2024/11/14</p>
+            <div class="thumbnail">
+                <img src="../img/bafkreihwlgqpy6liabzf2biweszyhbtvpkl3xtijrkcwbqzn3rkjmefp74%20(1).jpg" alt="Image 1" onclick="showImage(this)">
+                <div class="shadow-overlay"></div>
+            </div>
+            <ul>
+                <li>#秋天</li>
+                <li>#ㄘ胖胖</li>
+            </ul>
         </div>
+        <div class="frame">
+            <p>2024/11/14</p>
+            <div class="thumbnail">
+                <img src="../img/1st_img.png" alt="Image 1" onclick="showImage(this)">
+                <div class="shadow-overlay"></div>
+            </div>
+            <ul>
+                <li>#contest</li>
+                <li>#1st</li>
+            </ul>
+        </div>
+        <div class="frame">
+            <p>2024/11/14</p>
+            <div class="thumbnail">
+                <img src="../img/grass_cake_bird.png" alt="Image 3" onclick="showImage(this)">
+                <div class="shadow-overlay"></div>
+            </div>
+            <ul>
+                <li>#草粿鳥</li>
+                <li>#設定</li>
+            </ul>
+        </div>
+        <div class="frame">
+            <p>2024/11/14</p>
+            <div class="thumbnail">
+                <img src="../img/grass_cake_setting.png" alt="Image 2" onclick="showImage(this)">
+                <div class="shadow-overlay"></div>
+            </div>
+            <ul>
+                <li>#草粿</li>
+                <li>#設定</li>
+            </ul>
+        </div>
+
+        <!-- 增加更多縮略圖 -->
+    </div>
+
+    <div id="overlay" class="overlay" onclick="hideImage()">
+        <div class="header-space"></div>
+        <img id="largeImage" class="large-image" src="" alt="Large Image">
     </div>
 
     <div class="footer">

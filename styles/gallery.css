@@ -1,0 +1,84 @@
+body {
+    font-family: 'Microsoft JhengHei', sans-serif;
+    background-color: #fdfdef;
+    margin: 0;
+    padding: 0;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 30px;
+}
+/* 設定縮略圖大小和截圖方式 */
+.frame{
+    background-color: white;
+    padding: 0 10px 10px;
+    box-shadow: 5px 8px 5px #d3d3be;
+    margin: 10px;
+    position: relative;
+    z-index: 3;
+}
+.frame p{
+    color: #4e6a60;
+    margin: 10px 0;
+}
+.frame ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+}
+.frame ul li{
+    background-color: #8ea186;
+    color: white;
+    border-radius: 4px;
+    padding: 3px 6px;
+    margin: 0 3px;
+}
+.shadow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.3); /* 內陰影 */
+    pointer-events: none; /* 避免遮罩干擾點擊事件 */
+}
+.thumbnail {
+    position: relative;
+    z-index: 2;
+    width: 240px; /* 設定固定的寬度 */
+    height: 240px; /* 設定固定的高度 */
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/* 確保圖片填滿框架，並截取部分 */
+}
+
+/* 遮罩層和放大圖片樣式 */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+.large-image {
+    max-width: 80%;
+    max-height: 80%;
+    z-index: 5;
+}

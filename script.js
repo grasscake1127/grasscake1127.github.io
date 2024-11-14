@@ -35,3 +35,13 @@ hamburgerToggle.addEventListener("click", () => {
     navbarLinks.classList.toggle("clicked");
     //class改成active後就執行.navbar-links.active的css，也就是display: flex
 })
+
+function showImage(thumbnail) {
+    const largeImage = document.getElementById("largeImage");
+    largeImage.src = thumbnail.src;
+    document.getElementById("overlay").style.display = "flex";
+}
+
+function hideImage() {
+    document.getElementById("overlay").style.display = "none";
+}
