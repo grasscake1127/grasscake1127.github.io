@@ -1,12 +1,7 @@
-window.addEventListener("load", function() {
-    // 當頁面完全載入後，隱藏 Loading 畫面並顯示主內容
-    document.getElementById("loading-screen").style.display = "none";
-});
 
 function random(min, max) {
     return Math.random() * (max - min) + min;
 }
-
 // 生成三角形
 function createTriangle() {
     const triangle = document.createElement('div');
@@ -36,12 +31,3 @@ hamburgerToggle.addEventListener("click", () => {
     //class改成active後就執行.navbar-links.active的css，也就是display: flex
 })
 
-function showImage(thumbnail) {
-    const largeImage = document.getElementById("largeImage");
-    largeImage.src = thumbnail.src;
-    document.getElementById("overlay").style.display = "flex";
-}
-
-function hideImage() {
-    document.getElementById("overlay").style.display = "none";
-}
