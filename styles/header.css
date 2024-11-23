@@ -6,7 +6,7 @@ header nav {
     width: 100%;
     background-color: #97B694;
     align-items: center;
-    z-index: 10;
+    z-index: 30;
 }
 
 header ul {
@@ -56,7 +56,7 @@ ul.top-right ul { /*隱藏次選單*/
     background-color: #b0d3ac;
     min-width: 100%; /* 下拉選單的寬度 */
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+    z-index: 30;
 }
 
 
@@ -130,7 +130,7 @@ ul.top-right li:hover > ul { /* 滑鼠滑入展開次選單*/
     justify-content: space-between;
     align-items: flex-end;/*因為bar有長有短，所以靠左*/
     cursor: pointer;
-    z-index: 11;
+    z-index: 31;
 }
 .hamburger-toggle span {
     height: 3px;
