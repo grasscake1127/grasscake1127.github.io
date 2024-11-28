@@ -1,14 +1,7 @@
 
-.grass-field {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 19;
-}
 .box{
     position: fixed;
-    bottom: 5rem;
+    bottom: 3rem;
     right: 2rem;
     height: 140px;
     cursor: pointer;
@@ -16,8 +9,8 @@
     z-index: 21;
 }
 .caoguo {
-    position: absolute;
-    bottom: 10rem;
+    position: fixed;
+    bottom: 8.5rem;
     right: 3rem;
     height: 100px;
     cursor: grab;
@@ -27,6 +20,7 @@
 }
 
 .grass {
+    z-index: 19;
     position: absolute;
     width: 25px; /* 草圖片的寬度 */
     height: 0; /* 初始高度設為 0 */
@@ -68,7 +62,7 @@
         height: 60px;
     }
     .caoguo{
-        bottom: 10rem;
+        bottom: 5.5rem;
         right: 1rem;
         height: 50px;
     }

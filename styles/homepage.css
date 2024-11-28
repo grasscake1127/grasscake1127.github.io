@@ -14,7 +14,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    z-index: 2;
+    z-index: 7;
     position: relative;
 }
 
@@ -67,6 +67,7 @@ div h2 b{
     margin-left: 40px;
 }
 .container a {
+    position: relative;
     color: #8ea186;
     font-size: 1.2rem;
     text-decoration: none;
@@ -77,6 +78,7 @@ div h2 b{
     border: 3px solid #8ea186;
     margin-right: 30px;
     max-width: fit-content;
+    z-index: 7;
 }
 .container li{
 

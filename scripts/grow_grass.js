@@ -1,4 +1,4 @@
-const grassField = document.querySelector('.grass-field');
+const grassField = document.querySelector('.container');
 const caoguo = document.querySelector('.caoguo');
 const box = document.querySelector('.box');
 
@@ -21,7 +21,6 @@ const rect = caoguo.getBoundingClientRect();
 box.addEventListener('click', ()=>{
     caoguo.style.zIndex='22';
     caoguo.classList.add('pop');
-    console.log(caoguo);
 })
 
 // 滑鼠按下時
@@ -67,7 +66,7 @@ grassField.addEventListener('mousemove', (e) => {
         caoguo.style.top = `${y}px`;
 
         // 生成草
-        createGrass(x + 150, y + 85,20,60); // 草的中心點
+        createGrass(x + 150, y + 20,20,60); // 草的中心點
         checkCollision();
     }
 });
@@ -87,7 +86,6 @@ grassField.addEventListener('touchmove', (e) => {
         // 設定草粿的新位置
         const x = touch.clientX - offsetX;
         const y = touch.clientY - offsetY;
-        console.log(`${touch.clientX}px`);
 
         caoguo.style.left = `${x}px`;
         caoguo.style.top = `${y}px`;
@@ -96,7 +94,7 @@ grassField.addEventListener('touchmove', (e) => {
         e.preventDefault();
         caoguo.style.cursor = 'grabbing';
         // 生成草
-        createGrass(x + 60, y + 45,5,30); // 草的中心點
+        createGrass(x + 60, y + 90,10,30); // 草的中心點
         checkCollision();
     }
 });
