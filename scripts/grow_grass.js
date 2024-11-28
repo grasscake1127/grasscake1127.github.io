@@ -12,15 +12,35 @@ let firstPointY=null;
 let grasses = [];
 let face="left";
 let isEating = false;
+let isBoxOpen = false;
 
 // 設定初始位置
-const rect = caoguo.getBoundingClientRect();
+// const rect = caoguo.getBoundingClientRect();
 // caoguo.style.left = `${rect.left}px`;
 // caoguo.style.top = `${rect.top}px`;
 
 box.addEventListener('click', ()=>{
-    caoguo.style.zIndex='22';
-    caoguo.classList.add('pop');
+    if(!isBoxOpen){
+        caoguo.style.display = 'block';
+        caoguo.style.zIndex='22';
+        caoguo.classList.add('pop');
+        box.src='../img/box_open.png';
+        isBoxOpen=true;
+    }else{
+        isBoxOpen=false;
+        box.src='../img/box.png';
+        caoguo.style.top = 'auto';
+        caoguo.style.left = 'auto';
+        caoguo.style.bottom =  '8.5rem';
+        caoguo.style.right = '3rem';
+        caoguo.style.display = 'none';
+        caoguo.src='../img/grasscake_transparent.png';
+
+        grasses.forEach((grass) => {
+            grass.remove(); // 從 DOM 中移除草元素
+        });
+        grasses = [];
+    }
 })
 
 // 滑鼠按下時
@@ -100,7 +120,7 @@ grassField.addEventListener('touchmove', (e) => {
 });
 
 // 滑鼠放開時
-grassField.addEventListener('mouseup', () => {
+caoguo.addEventListener('mouseup', () => {
     isDragging = false;
     caoguo.style.cursor = 'grab';
 });
