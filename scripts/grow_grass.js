@@ -1,6 +1,7 @@
 const grassField = document.querySelector('.container');
 const caoguo = document.querySelector('.caoguo');
 const box = document.querySelector('.box');
+const mediaQuery = window.matchMedia('(max-width: 600px)');
 
 let isDragging = false;
 let offsetX = 0, offsetY = 0;
@@ -31,8 +32,13 @@ box.addEventListener('click', ()=>{
         box.src='../img/box.png';
         caoguo.style.top = 'auto';
         caoguo.style.left = 'auto';
-        caoguo.style.bottom =  '8.5rem';
-        caoguo.style.right = '3rem';
+        if (mediaQuery.matches) {
+            caoguo.style.bottom =  '5.5rem';
+            caoguo.style.right = '1rem';
+        }else{
+            caoguo.style.bottom =  '8.5rem';
+            caoguo.style.right = '3rem';
+        }
         caoguo.style.display = 'none';
         caoguo.src='../img/grasscake_transparent.png';
 
@@ -114,7 +120,7 @@ grassField.addEventListener('touchmove', (e) => {
         e.preventDefault();
         caoguo.style.cursor = 'grabbing';
         // 生成草
-        createGrass(x + 60, y + 90,10,30); // 草的中心點
+        createGrass(x + 60, y - 20,10,30); // 草的中心點
         checkCollision();
     }
 });
