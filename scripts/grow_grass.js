@@ -14,6 +14,8 @@ let grasses = [];
 let face="left";
 let isEating = false;
 let isBoxOpen = false;
+let clickTime=0;
+const toriko=100;
 
 // 設定初始位置
 // const rect = caoguo.getBoundingClientRect();
@@ -21,6 +23,24 @@ let isBoxOpen = false;
 // caoguo.style.top = `${rect.top}px`;
 
 box.addEventListener('click', ()=>{
+    clickTime+=1;
+    if(clickTime%toriko===0){
+        const smallEgg = document.createElement('img');
+        if(clickTime%1000===0){
+            smallEgg.src='../img/syuaweu.png';
+        }else{
+            smallEgg.src = '../img/toriko.png'; // 指向你的草圖片
+        }
+        smallEgg.className = 'toriko';
+        grassField.appendChild(smallEgg);
+
+        setTimeout(() => {
+            smallEgg.style.opacity=0;
+        }, 5000);
+        setTimeout(() => {
+            smallEgg.remove();
+        }, 10000);
+    }
     if(!isBoxOpen){
         caoguo.style.display = 'block';
         caoguo.style.zIndex='22';

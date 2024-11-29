@@ -28,6 +28,16 @@
     transform: scaleY(0); /* 初始縮放為 0 */
     animation: growHeight 2s forwards; /* 使用高度變化動畫 */
 }
+.toriko{
+    height: 200px;
+    position: fixed;
+    bottom: 3rem;
+    right: 15rem;
+    z-index: 21;
+    opacity: 1;
+    transition: opacity 2s ease;
+    animation: pop 0.5s forwards;
+}
 .pop{
     animation: pop 0.5s forwards;
 }
@@ -46,11 +56,9 @@
 @keyframes pop {
     from {
         transform: scale(0);
-        opacity: 0.5;
     }
     to {
         transform: scale(1);
-        opacity: 1;
     }
 
 }
