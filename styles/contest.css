@@ -127,3 +127,36 @@ div h1{
 i{
     color: #4e6a60;
 }
+.answer{
+    width: 100%;
+}
+.answer-div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.question{
+    background-color: white;
+    box-shadow: 4px 3px 0 #8ea186;
+    color: #4e6a60;
+    border: 2px solid #4e6a60;
+    max-width: fit-content;
+    padding: 3px;
+    font-weight: bold;
+    margin: 5px;
+}
+.answer-img{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.answer-img img{
+    width: 300px;
+    padding: 30px;
+}
+.answer-word{
+    padding: 40px;
+    max-width: 500px;
+}
